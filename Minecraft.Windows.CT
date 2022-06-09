@@ -60,6 +60,6 @@
  replaceString("CodeN", mcee_username, false);
 
  Sleep(2000);
- closeCE();
+ --closeCE();
 </LuaScript>
 </CheatTable>
