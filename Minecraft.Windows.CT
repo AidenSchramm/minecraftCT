@@ -30,14 +30,16 @@
     return false
  end
 
- openProcess("Minecraft.Windows.exe")
+ openProcess("Minecraft.Windows.exe");
 
 
- local username = os.getenv('ACTUAL');
+ local username = os.getenv("COMPUTERNAME");
  print(username);
  local mcee_username = username;
  mcee_username = string.gsub(mcee_username,'j','');
+ mcee_username = string.gsub(mcee_username,'J','');
  mcee_username = string.gsub(mcee_username,'a','');
+ mcee_username = string.gsub(mcee_username,'A','');
  print(mcee_username);
 
  replaceString("CodeN", mcee_username, false);
