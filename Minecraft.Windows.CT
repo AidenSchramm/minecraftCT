@@ -32,25 +32,8 @@
 
  openProcess("Minecraft.Windows.exe")
 
- actual = "empty";
- print(actual);
- print("--------------");
- f = io.popen([[dir "C:\Users\" /b /ad]]);
- for fpath in f:lines() do
-   local current = fpath:match("[/\\]?([^/\\]+)$");
-   --current = "ninja02";
-   --print(current);  -- for the full dir, just use fpath
-   current = string.match(current, "ninja.-$");
-   if (current and current ~= '') then
-      actual = current;
-   end
- end
- f:close();
- print(actual);
 
- print("--------------");
-
- local username = actual; --os.getenv('USERNAME');
+ local username = os.getenv('ACTUAL');
  print(username);
  local mcee_username = username;
  mcee_username = string.gsub(mcee_username,'j','');
@@ -60,6 +43,6 @@
  replaceString("CodeN", mcee_username, false);
 
  Sleep(2000);
- --closeCE();
+ closeCE();
 </LuaScript>
 </CheatTable>
