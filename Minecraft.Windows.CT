@@ -36,15 +36,27 @@
  local username = os.getenv("COMPUTERNAME");
  print(username);
  local mcee_username = username;
- mcee_username = string.gsub(mcee_username,'j','');
- mcee_username = string.gsub(mcee_username,'J','');
- mcee_username = string.gsub(mcee_username,'a','');
- mcee_username = string.gsub(mcee_username,'A','');
+
+ if string.find(mcee_username, "ninja") then
+   mcee_username = string.gsub(mcee_username,'j','');
+   mcee_username = string.gsub(mcee_username,'J','');
+   mcee_username = string.gsub(mcee_username,'a','');
+   mcee_username = string.gsub(mcee_username,'A','');
+ end
+
+ if string.find(mcee_username, "sensei") then
+   mcee_username = string.gsub(mcee_username,'e','');
+   mcee_username = string.gsub(mcee_username,'E','');
+   mcee_username = string.gsub(mcee_username,'i','');
+   mcee_username = string.gsub(mcee_username,'I','');
+ end
+
+
  print(mcee_username);
 
  replaceString("CodeN", mcee_username, false);
 
  Sleep(2000);
- closeCE();
+ --closeCE();
 </LuaScript>
 </CheatTable>
