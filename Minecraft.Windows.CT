@@ -43,8 +43,21 @@
    mcee_username = string.gsub(mcee_username,'a','');
    mcee_username = string.gsub(mcee_username,'A','');
  end
+ if string.find(mcee_username, "NINJA") then
+   mcee_username = string.gsub(mcee_username,'j','');
+   mcee_username = string.gsub(mcee_username,'J','');
+   mcee_username = string.gsub(mcee_username,'a','');
+   mcee_username = string.gsub(mcee_username,'A','');
+ end
+
 
  if string.find(mcee_username, "sensei") then
+   mcee_username = string.gsub(mcee_username,'e','');
+   mcee_username = string.gsub(mcee_username,'E','');
+   mcee_username = string.gsub(mcee_username,'i','');
+   mcee_username = string.gsub(mcee_username,'I','');
+ end
+ if string.find(mcee_username, "SENSEI") then
    mcee_username = string.gsub(mcee_username,'e','');
    mcee_username = string.gsub(mcee_username,'E','');
    mcee_username = string.gsub(mcee_username,'i','');
@@ -56,7 +69,7 @@
 
  replaceString("CodeN", mcee_username, false);
 
- Sleep(2000);
- --closeCE();
+ Sleep(5000);
+ closeCE();
 </LuaScript>
 </CheatTable>
